@@ -488,10 +488,12 @@ UserDefault* UserDefault::getInstance()
     return _userDefault;
 }
 
+#ifdef KEEP_COMPATABILITY
 bool UserDefault::isXMLFileExist()
 {
     return FileUtils::getInstance()->isFileExist(_filePath);
 }
+#endif
 
 void UserDefault::initXMLFilePath()
 {
